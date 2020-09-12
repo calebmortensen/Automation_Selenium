@@ -20,7 +20,7 @@ public class GCR_DataProvider {
 	@DataProvider(name = "gcr-url")
 	public static Object[][] gcrUrl() {
 		return new Object[][] {
-			{ "https://review.ngai.alerehive.com"}
+			{ "https://URL.com"}
 						    
 		};
 	}

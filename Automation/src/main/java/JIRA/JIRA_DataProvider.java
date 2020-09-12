@@ -19,7 +19,7 @@ public class JIRA_DataProvider {
 	@DataProvider(name = "Jira-Url")
 	public static Object[][] jiraUrl() {
 		return new Object[][] {
-			{ "https://jira-dev.alerehive.com" }
+			{ "https://jira-URL.com" }
 						    
 		};
 	}
