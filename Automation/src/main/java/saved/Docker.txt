@@ -1,0 +1,49 @@
+https://engineering.riotgames.com/news/putting-jenkins-docker-container
+
+docker ps (lists running containers)
+docker info
+docker pull jenkins/jenkins
+docker run -p 8080:8080 --name=jenkins-master jenkins/jenkins
+-d (daemon flag to stop standard output logs)
+Ctrl-c on the terminal window running your container to stop it
+docker stop jenkins-master
+docker rm jenkins-master
+
+
+make Dockerfile
+add following lines:
+FROM jenkins/jenkins:2.60.3
+LABEL maintainer=”yourcontact@somemail.com
+
+Then from console, run: 
+docker build -t LatestJenkinsImage .    (This runs against Dockerfile)
+
+RUNNING A BASIC COMMAND AGAINST YOUR CONTAINER
+docker exec jenkins-master ps -ef | grep java  
+
+Connect to RUNNING Container
+docker exec -it <mycontainer> bash
+
+The cp command can be used to copy files. One specific file can be copied like:
+
+docker cp foo.txt mycontainer:/foo.txt
+
+Save a container to IMAGE (COMMIT)
+https://www.techrepublic.com/article/how-to-commit-changes-to-a-docker-image/
+docker commit <Container ID> <New Template Name>
+
+https://github.com/GerritCodeReview/docker-gerrit
+Pull Docker Image:
+docker run -ti -p 8080:8080 -p 29418:29418 gerritcodereview/gerrit
+
+ps aux
+id <Jenkins>
+chown -R <id> ./*
+
+docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
+
+PUSH Image to Docker.IO :
+https://stackoverflow.com/questions/28349392/how-to-push-a-docker-image-to-a-private-repository
+docker login --username username --password password
+docker tag <Image-ID> calebmortensen/devops:<TagName>
+docker push calebmortensen/devops:<TagName>

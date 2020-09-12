@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="AllAutoFrameworks" verbose="1" configfailurepolicy="continue" >
+
+<suite-files>
+    <suite-file path="./Jira_AutoFramework.xml"/>
+    <suite-file path="./GIT_AutoFramework.xml"/>
+    <suite-file path="./GCR_AutoFramework.xml"/>
+    <suite-file path="./JENKINS_AutoFramework.xml"/>
+</suite-files>
+
+<suite-files>
+   <suite-file path="./GB_AutoFramework.xml"/>
+    <suite-file path="./Coverity_AutoFramework.xml"/>
+    </suite-files>
+</suite>

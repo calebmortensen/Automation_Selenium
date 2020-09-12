@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="ScreenCapture" verbose="1" configfailurepolicy="continue" >
+
+<!-- ScreenCapture ENVIRONMENT PARAMETERS -->
+<parameter name="Url" value="https://www.google.com"/>
+<parameter name="Username" value=""/>
+<parameter name="Password" value=""/>
+<!-- <parameter name="Username" value="User"/>
+<parameter name="Password" value="Password"/> -->
+
+<!-- ScreenCapture TEST SCRIPTS BELOW!!!  -->
+
+<!-- ScreenCapture TEST SCRIPT -->
+<test name="Browser">
+<classes>
+<class name = "browser.Browsers" >
+<methods>
+<include name="IELaunch" />
+</methods>
+</class>
+</classes>
+</test>
+
+<!-- ScreenCapture TEST SCRIPT (Parameters)-->
+<test name="ScreenCapture">
+<classes>
+<class name = "screenshot.ScreenCapture" >
+<methods>
+<include name="LaunchURL" />
+<include name="GoogleCarSearch" />
+<include name="closeBrowser" />
+</methods>
+</class>
+</classes>
+</test>
+
+</suite>

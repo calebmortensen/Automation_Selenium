@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="GCR" verbose="1" configfailurepolicy="continue" >
+
+<!-- GCR ENVIRONMENT PARAMETERS -->
+<parameter name="Url" value="https://GERRIT.com/"/>
+<parameter name="Username" value="USER"/>
+<parameter name="Password" value="PASSWORD"/>
+<parameter name="searchMain" value="test"/>
+<parameter name="filter" value="test"/>
+
+<!-- GCR TEST SCRIPTS BELOW!!!  -->
+
+
+<!-- GCR TEST SCRIPT -->
+<test name="Browser">
+<classes>
+<class name = "browser.Browsers" >
+<methods>
+<include name="IELaunch" />
+</methods>
+</class>
+</classes>
+</test>
+
+<!-- GCR TEST SCRIPT (Parameters)-->
+<test name="GCR_Login">
+<classes>
+<class name = "gcr.GCR_LoginLogout" >
+<methods>
+<include name="GCR_Launch" />
+<include name="GCRLoggedInCheck" />
+<include name="GCRLogin" />
+</methods>
+</class>
+</classes>
+</test>
+
+<!-- GCR TEST SCRIPT (Parameters)-->
+<test name="GCR_CustomFilter">
+<classes>
+<class name = "gcr.GCR_CustomFilter" >
+<methods>
+<include name="MainSearch" />
+<include name="SearchButton" />
+<include name="SearchDropListDocs" />
+<include name="SearchDropListChanges" />
+</methods>
+</class>
+</classes>
+</test>
+
+<!-- GCR TEST SCRIPT (Parameters)-->
+<test name="GCR_CustomLink">
+<classes>
+<class name = "gcr.GCR_CustomLink" >
+<methods>
+<include name="LinkNavigation" />
+</methods>
+</class>
+</classes>
+</test>
+
+<!-- GCR TEST SCRIPT (Parameters)-->
+<test name="GCR_CustomNavigation">
+<classes>
+<class name = "gcr.GCR_CustomNavigation" >
+<methods>
+<include name="All" />
+<include name="Open" />
+<include name="Merged" />
+<include name="Abandoned" />
+<include name="My" />
+<include name="Changes" />
+<include name="Drafts" />
+<include name="DraftComments" />
+<include name="Edits" />
+<include name="WatchedChanges" />
+<include name="StarredChanges" />
+<include name="Groups" />
+<include name="Projects" />
+<include name="List" />
+<include name="Filter" />
+<include name="People" />
+<include name="ListGroups" />
+<include name="Documentation" />
+<include name="TableOfContents" />
+<include name="Searching" />
+<include name="Uploading" />
+<include name="AccessControls" />
+<include name="API" />
+<include name="ProjectOwnerGuide" />
+</methods>
+</class>
+</classes>
+</test>
+
+<!-- GCR TEST SCRIPT (Parameters)-->
+<test name="GCR_UserProfileSettings">
+<classes>
+<class name = "gcr.GCR_UserProfileSettings" >
+<methods>
+<include name="MenuBarUserName" />
+<include name="ProfileDialog" />
+<include name="Settings" />
+<include name="SettingsMain" />
+<include name="Profile" />
+<include name="Preferences" />
+<include name="DiffPreferences" />
+<include name="EditPreferences" />
+<include name="WatchedProjects" />
+<include name="ContactInformation" />
+<include name="SSHPublicKeys" />
+<include name="Identities" />
+<include name="Groups" />
+</methods>
+</class>
+</classes>
+</test>
+
+<!-- GCR TEST SCRIPT -->
+<test name="GCR_Logout">
+<classes>
+<class name = "gcr.GCR_LoginLogout" >
+<methods>
+<include name="GCRLogout" />
+<include name="TearDown" />
+</methods>
+</class>
+</classes>
+</test>
+
+</suite>

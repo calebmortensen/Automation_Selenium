@@ -1,0 +1,57 @@
+<<<<SHORT TERM GOALS:>>>>
+<<Next Action Items>>
+
+GIT - SSH Clone + text in file to push
+Add Req_IDs to Jira Methods
+Verify Jenkins +1 sent to GCR
+
+<<<<LONG TERM GOALS:>>>>
+Factories in TestNG
+Backend Verification(mySQL,PostGres)
+Integrate Automation with JAMA/API
+Coverity Desktop Analysis Plugin for Eclipse
+Docker on Jenkins: Run Headless
+
+<<<<CODED/NEEDS FURTHER TESTING:>>>>
+Change Issue Status: Jira
+Verify Issue Status: Jira
+Pull Repo: GIT
+WelcomeToJIRA: Jira
+
+<<<<COMPLETED/TESTED:>>>>
+JIRA:
+CheckedLoggedIn/Login/Logout/
+Create Issue
+Configure Fields
+Sort by
+Obtain Jira Issue ID & Write to File
+Change Issue Status Methods
+Updated Methods for New became Open
+Comments field is now required for ReOpen
+Severity Levels have more fields
+
+JENKINS:
+CheckedLoggedIn/Login/Logout/
+
+GCR:
+CheckedLoggedIn/Login/Logout/
+Search
+Filter
+Launch new tab & return
+Navigate profile
+
+GitBlit:
+CheckedLoggedIn/Login/Logout/
+
+GIT:
+Pull
+Coverity:
+CheckedLoggedIn/Login/Logout/
+
+OTHER:
+Launch: Chrome, FireFox, Edge, Internet Explorer
+Clear All Cookies from Internet Explorer
+Parameterize Classes
+Screenshot Method (Overload with Requirement/TestCase)
+JDBC Framework: Postgres
+JDBC Framework: mySQL

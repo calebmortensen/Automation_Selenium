@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="JENKINS" verbose="1" configfailurepolicy="continue" >
+
+<!-- JENKINS ENVIRONMENT PARAMETERS -->
+<parameter name="Url" value="https://URL.com/"/>
+<parameter name="Username" value="USER"/>
+<parameter name="Password" value="Password"/>
+
+
+<!-- JENKINS TEST SCRIPTS BELOW!!!  -->
+
+
+<!-- JENKINS TEST SCRIPT -->
+<test name="Browser">
+<classes>
+<class name = "browser.Browsers" >
+<methods>
+<include name="IELaunch" />
+</methods>
+</class>
+</classes>
+</test>
+
+<!-- JENKINS TEST SCRIPT (Parameters)-->
+<test name="JENKINS_Login">
+<classes>
+<class name = "jenkins.JENKINS_LoginLogout" >
+<methods>
+<include name="JENKINS_Launch" />
+<include name="JENKINSLoggedInCheck" />
+<include name="JENKINSLogin" />
+</methods>
+</class>
+</classes>
+</test>
+
+<!-- JENKINS TEST SCRIPT -->
+<test name="JENKINS_Logout">
+<classes>
+<class name = "jenkins.JENKINS_LoginLogout" >
+<methods>
+<include name="JENKINSLogout" />
+<include name="TearDown" />
+</methods>
+</class>
+</classes>
+</test>
+
+</suite>

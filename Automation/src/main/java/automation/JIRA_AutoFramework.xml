@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="JIRA" verbose="1" configfailurepolicy="continue" >
+
+<!-- JIRA ENVIRONMENT PARAMETERS -->
+<parameter name="Url" value="https://jira-URL.com"/>
+<parameter name="Username" value="caleb.mortensen"/>
+<parameter name="Password" value="Password"/>
+<!-- <parameter name="Username" value="USER"/>
+<parameter name="Password" value="Password"/> -->
+
+<!-- JIRA CREATE ISSUE PARAMETERS -->
+<parameter name="Project" value="SandBox (SAN)"/>
+<parameter name="IssueType" value="Defect"/>
+<parameter name="Summary" value="Automation"/>
+
+<parameter name="HowFound" value="Automated Testing"/>
+<parameter name="OnMarket" value="No"/>
+<parameter name="PhaseFound" value="Development"/>
+<parameter name="AffectsVersions" value="1.0"/>
+<parameter name="Components" value="JIRA Validation"/>
+<parameter name="Severity" value="Life Threatening"/>
+<parameter name="ProbabilityOfHarm" value="Remote"/>
+<parameter name="Justification" value="Enter Justification Text"/>
+<parameter name="Description" value="Enter Description Text"/>
+<parameter name="FixVersions" value="1.1"/>
+<parameter name="Priority" value="High"/>
+<parameter name="Assignee" value=""/>
+<parameter name="DueDate" value="28/Feb/19"/>
+<parameter name="StoryPoints" value="5"/>
+<parameter name="OriginalEstimate" value="2w 4d 8h"/>
+<parameter name="RemainingEstimate" value="1w 2d 4h"/>
+<parameter name="Attachment" value=""/>
+<parameter name="Labels" value="Testing"/>
+<parameter name="EpicLink" value="GCR"/>
+<parameter name="Environment" value="Enter Environment Text"/>
+<parameter name="LinkedIssues" value="Send Linked Issues"/>
+<parameter name="Sprint" value="Send Sprint"/>
+<parameter name="SubComponent" value="Send SubComponent"/>
+<parameter name="SubComponent1" value="Send SubComponent1"/>
+<parameter name="TimeSpent" value="3w 3d 3h"/>
+<parameter name="DateStarted" value="28/Dec/18 11:08AM"/>
+<parameter name="SetTo" value="4w 4d 4h"/>
+<parameter name="ReducedBy" value="5w 5d 5h"/>
+<parameter name="WorkDescription" value="Send Work Description"/>
+<parameter name="Reason" value="Send Reason"/>
+<parameter name="Comment" value="Send Comment"/>
+<parameter name="Classification" value="Test"/>
+<!-- Hard Coded Automation value 'My Open Issues'-->
+<parameter name="Sort" value="assignee = currentUser() AND resolution = Unresolved AND summary ~ Automation order by updated DESC"/>
+<parameter name="advancedSearch" value="assignee = currentUser() AND resolution = Unresolved order by updated DESC"/>
+
+<!-- JIRA TEST SCRIPTS BELOW!!!  -->
+
+<!-- JIRA TEST SCRIPT -->
+<test name="Browser" preserve-order="true">
+<classes>
+<class name = "browser.Browsers" >
+<methods>
+<include name="IELaunch" />
+</methods>
+</class>
+</classes>
+</test>
+
+<!-- JIRA TEST SCRIPT (Parameters)-->
+<test name="JIRA_Login" preserve-order="true">
+<classes>
+<class name = "jira.JIRA_LoginLogout" >
+<methods>
+<include name="JIRALaunch" />
+<include name="JIRALoggedInCheck" />
+<include name="JIRALogin" />
+<include name="JIRAWelcomeToJIRA" />
+</methods>
+</class>
+</classes>
+</test>
+
+<!-- JIRA TEST SCRIPT (Parameters)-->
+
+<!-- <test name="JIRA_ConfigureIssueFields" preserve-order="true">
+<classes>
+<class name = "jira.JIRA_ConfigureIssueFields" >
+<methods>
+<include name="Create" />
+<include name="ConfigureFields" />
+<include name="CF_Assignee" />
+<include name="CF_Attachment" />
+<include name="CF_Components" />
+<include name="CF_DueDate" />
+<include name="CF_EpicLink" />
+<include name="CF_FixVersions" />
+<include name="CF_Labels" />
+<include name="CF_LogWork" />
+<include name="CF_Build" />
+<include name="CF_Justification" />
+<include name="CF_StoryPoints" />
+<include name="CF_Severity" />
+<include name="CF_OnMarket" />
+<include name="CF_Priority" />
+<include name="CF_TimeTracking" />
+<include name="CF_Sprint" />
+<include name="CF_LinkedIssues" />
+<include name="CF_Environment" />
+<include name="CF_Reporter" />
+<include name="CF_ReferenceID" />
+<include name="CF_Classification" />
+<include name="CF_Description" />
+<include name="CF_ProbabilityOfHarm" />
+<include name="CF_SubComponent" />
+<include name="CF_Summary" />
+</methods>
+</class>
+</classes>
+</test> -->
+
+<!-- JIRA TEST SCRIPT (Parameters)-->
+<test name="JIRA_CreateIssue" preserve-order="true">
+<classes>
+<class name = "jira.JIRA_CreateIssue" >
+<methods>
+<include name="Create" />
+<include name="Project" />
+<include name="IssueType" />
+<include name="Classification" />
+<include name="HowFound" />
+<include name="OnMarket" />
+<include name="PhaseFound" />
+<include name="AffectsVersions" />
+<include name="Components" />
+<include name="Severity" />
+<include name="ProbabilityOfHarm" />
+<include name="Justification" />
+<include name="Summary" />
+<include name="Description" />
+<include name="FixVersions" />
+<include name="Priority" />
+<include name="Assignee" />
+<include name="DueDate" />
+<include name="StoryPoints" />
+<include name="OriginalEstimate" />
+<include name="RemainingEstimate" />
+<include name="Labels" />
+<include name="CreateButton" />
+<!-- 
+<include name="LogWork" />
+<include name="Attachment" />
+<include name="Environment" />
+<include name="LinkedIssues" />
+<include name="Sprint" />
+<include name="EpicLink" />
+ -->
+
+</methods>
+</class>
+</classes>
+</test>
+
+<!-- JIRA TEST SCRIPT -->
+<test name="JIRA_SelectIssue" preserve-order="true">
+<classes>
+<class name = "jira.JIRA_SelectIssue" >
+<methods>
+<include name="SelectRecentOpenIssue" />
+<include name="CopyIssueID" />
+
+</methods>
+</class>
+</classes>
+</test>
+
+<!-- JIRA TEST SCRIPT -->
+<test name="JIRA_ChangeIssueStatus" preserve-order="true">
+<classes>
+<class name = "jira.JIRA_ChangeIssueStatus" >
+<methods>
+<include name="Implement" />
+<include name="BackToOpen" />
+<include name="ToInvestigate" />
+<include name="BackToOpen1" />
+<include name="Implement1" />
+<include name="InReview" />
+<include name="ToTest" />
+<include name="Tested" />
+<include name="ReopenIssue" />
+<include name="BackToDone" />
+</methods>
+</class>
+</classes>
+</test>
+
+<!-- JIRA TEST SCRIPT -->
+<test name="JIRA_Logout">
+<classes>
+<class name = "jira.JIRA_LoginLogout" >
+<methods>
+<include name="JIRALogout" />
+<include name="TearDown" />
+</methods>
+</class>
+</classes>
+</test>
+
+</suite>

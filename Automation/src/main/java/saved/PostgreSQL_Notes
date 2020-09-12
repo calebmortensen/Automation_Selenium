@@ -1,0 +1,20 @@
+https://jdbc.postgresql.org/download.html
+
+https://www.youtube.com/watch?v=obpZDtO7yo0
+
+https://alvinalexander.com/blog/post/postgresql/log-in-postgresql-database
+psql -d mydb -U myuser -h localhost
+
+psql -U <postgres user>
+OR
+psql -d mydb -U <postgres user>
+
+CREATE DATABASE selenium;
+postgres=# \c selenium
+CREATE SCHEMA automation;
+create user caleb with password 'secret';
+
+create table automation.user(firstname varchar (25), lastname varchar (30), email varchar(40));
+
+insert into automation.user values('Darth', 'Vader', 'darth.vader@yahoo.com');
+

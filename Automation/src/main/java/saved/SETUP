@@ -1,0 +1,25 @@
+Baseline Installation for Tester's Environment:
+
+Install Java JDK
+Install Eclipse
+Import Integration/Automation project from Private GIT Repository into Eclipse
+Obtain DataProvider files from Management <For Credential passing> as they are part of .gitignore
+Modify Internet Explorer (All Zones -> UNCHECK 'Protected Mode')
+Install GIT
+
+Set Credentials:
+git config --global user.name "val-develop"
+git config --global user.email "val-develop@alere.com"
+
+Run Automation!
+
+
+
+Baseline 3rd Party Development Environment:
+
+JIRA (Version:
+Gerrit Code Review (Version:
+GIT (Version: 
+Jenkins (Version:
+GitBlit (Version:
+Coverity (Version:

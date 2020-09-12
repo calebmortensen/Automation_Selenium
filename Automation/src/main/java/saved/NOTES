@@ -1,0 +1,43 @@
+http://testng.org/doc/documentation-main.html#test-groups
+
+https://www.guru99.com/select-option-dropdown-selenium-webdriver.html
+
+http://www.software-testing-tutorials-automation.com/2015/07/iedriver-how-to-resolve-set-ie-browser.html
+
+https://www.maxtaf.com/press/selenium-webdriver-native-events-issues-internet-explorer-and-zoom-level
+
+http://toolsqa.com/selenium-webdriver/challenges-to-run-selenium-scripts-with-ie-browser/
+
+https://www.seleniumeasy.com/selenium-tutorials/how-to-run-webdriver-in-ie-browser
+
+https://sqa.stackexchange.com/questions/15594/selenium-how-to-access-the-same-session-in-a-new-window
+
+http://toolsqa.com/selenium-webdriver/c-sharp/how-to-handle-different-types-of-alert-and-popup-box-in-selenium-csharp/
+
+
+Press F8 (which is also Resume button),that will take you to the break point. 
+From there debug each line with F6. If you want to go to next break point press F8.
+F7 steps out of currently executed method
+
+https://blogs.microsoft.co.il/leonj/2018/01/30/run-git-commands-from-java-applications/
+
+https://stackoverflow.com/questions/30474447/git-fatal-i-dont-handle-protocol-http
+
+https://gist.github.com/Crydust/fd1b94afc52cd0f7dd4c
+
+http://toolsqa.com/selenium-webdriver/testng-parameters-data-provider/
+
+https://stackoverflow.com/questions/12524908/how-to-escape-in-xml/12524924
+
+https://stackoverflow.com/questions/35097849/how-to-pass-single-instance-of-webdriver-between-testng-classes
+
+https://www.softwaretestingmaterial.com/handle-drop-down-and-multi-select-list-using-selenium/
+
+https://community.jamasoftware.com/blogs/iman-bilal/2017/01/25/connecting-jama-to-your-automated-testing-tool
+
+https://sqa.stackexchange.com/questions/30596/how-to-store-copied-text-to-a-string-in-selenium-webdriver
+
+http://www.tothenew.com/blog/how-to-add-screenshots-to-testng-report/
+
+RUN METHOD TWICE IN SAME SUITE:
+https://stackoverflow.com/questions/34226935/testng-cant-call-the-same-test-twice

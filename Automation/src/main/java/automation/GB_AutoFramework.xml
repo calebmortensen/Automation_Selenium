@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="GB" verbose="1" configfailurepolicy="continue" >
+
+<!-- GB ENVIRONMENT PARAMETERS -->
+<parameter name="Url" value="https://URL.git.com"/>
+<parameter name="Username" value="USER"/>
+<parameter name="Password" value="PASSWORD"/>
+
+
+<!-- GB TEST SCRIPTS BELOW!!!  -->
+
+
+<!-- GB TEST SCRIPT -->
+<test name="Browser">
+<classes>
+<class name = "browser.Browsers" >
+<methods>
+<include name="IELaunch" />
+</methods>
+</class>
+</classes>
+</test>
+
+<!-- GB TEST SCRIPT (Parameters)-->
+<test name="GB_Login">
+<classes>
+<class name = "gitblit.GB_LoginLogout" >
+<methods>
+<include name="GB_Launch" />
+<include name="GBLoggedInCheck" />
+<include name="GBLogin" />
+</methods>
+</class>
+</classes>
+</test>
+
+
+<!-- GB TEST SCRIPT -->
+<test name="GB_Logout">
+<classes>
+<class name = "gitblit.GB_LoginLogout" >
+<methods>
+<include name="GBLogout" />
+<include name="TearDown" />
+</methods>
+</class>
+</classes>
+</test>
+
+</suite>

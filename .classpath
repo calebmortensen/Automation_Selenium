@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="Automation/lib/byte-buddy-1.8.15.jar"/>
+	<classpathentry kind="lib" path="Automation/lib/ChromeDriver_Version.txt"/>
+	<classpathentry kind="lib" path="Automation/lib/chromedriver.exe"/>
+	<classpathentry kind="lib" path="Automation/lib/client-combined-3.141.59.jar"/>
+	<classpathentry kind="lib" path="Automation/lib/client-combined-3.141.59-sources.jar"/>
+	<classpathentry kind="lib" path="Automation/lib/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="Automation/lib/commons-io-2.6.jar"/>
+	<classpathentry kind="lib" path="Automation/lib/commons-io-2.6-javadoc.jar"/>
+	<classpathentry kind="lib" path="Automation/lib/commons-io-2.6-sources.jar"/>
+	<classpathentry kind="lib" path="Automation/lib/commons-io-2.6-tests.jar"/>
+	<classpathentry kind="lib" path="Automation/lib/commons-io-2.6-test-sources.jar"/>
+	<classpathentry kind="lib" path="Automation/lib/geckodriver.exe"/>
+	<classpathentry kind="lib" path="Automation/lib/GeckoFireFox_Version"/>
+	<classpathentry kind="lib" path="Automation/lib/guava-25.0-jre.jar"/>
+	<classpathentry kind="lib" path="Automation/lib/IE_Version"/>
+	<classpathentry kind="lib" path="Automation/lib/IEDriverServer.exe"/>
+	<classpathentry kind="lib" path="Automation/lib/MicrosoftWebDriver_Version"/>
+	<classpathentry kind="lib" path="Automation/lib/MicrosoftWebDriver.exe"/>
+	<classpathentry kind="lib" path="Automation/lib/mssql-jdbc-8.2.2.jre8.jar"/>
+	<classpathentry kind="lib" path="Automation/lib/mysql-connector.jar"/>
+	<classpathentry kind="lib" path="Automation/lib/okhttp-3.11.0.jar"/>
+	<classpathentry kind="lib" path="Automation/lib/okio-1.14.0.jar"/>
+	<classpathentry kind="lib" path="Automation/lib/postgresql-42.2.5.jar"/>
+	<classpathentry kind="output" path="Integration-Selenium/target/classes"/>
+</classpath>

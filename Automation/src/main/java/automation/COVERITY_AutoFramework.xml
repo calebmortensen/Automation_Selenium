@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="COVERITY" verbose="1" configfailurepolicy="continue" >
+
+<!-- COVERITY ENVIRONMENT PARAMETERS -->
+<parameter name="Url" value="https://URL.com"/>
+<parameter name="Username" value="USER"/>
+<parameter name="Password" value="PASSWORD"/>
+
+
+<!-- COVERITY TEST SCRIPTS BELOW!!!  -->
+
+
+<!-- COVERITY TEST SCRIPT -->
+<test name="Browser">
+<classes>
+<class name = "browser.Browsers" >
+<methods>
+<include name="IELaunch" />
+</methods>
+</class>
+</classes>
+</test>
+
+<!-- COVERITY TEST SCRIPT (Parameters)-->
+<test name="COVERITY_Login">
+<classes>
+<class name = "coverity.COVERITY_LoginLogout" >
+<methods>
+<include name="COVERITYLaunch" />
+<include name="COVERITYLoggedInCheck" />
+<include name="COVERITYLogin" />
+</methods>
+</class>
+</classes>
+</test>
+
+
+<!-- COVERITY TEST SCRIPT -->
+<test name="COVERITY_Logout">
+<classes>
+<class name = "coverity.COVERITY_LoginLogout" >
+<methods>
+<include name="COVERITYLogout" />
+<include name="TearDown" />
+</methods>
+</class>
+</classes>
+</test>
+
+</suite>

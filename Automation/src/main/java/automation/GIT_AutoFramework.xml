@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="GIT" verbose="1" configfailurepolicy="continue" >
+
+<!-- JIRA ENVIRONMENT PARAMETERS -->
+<parameter name="Path" value= "c:\\temp\\GCR" />
+<parameter name="PathToFileID" value="./tempFiles/JiraID.txt"/>
+<parameter name="IssueID" value=""/>
+<parameter name="Url" value="https://GIT.com/"/>
+<parameter name="CloneSSH" value="git clone ssh://caleb.mortensen@review.URL.com:29437/test" />
+<parameter name="CloneAnonymousHttp" value="git clone https://URL.com/test" />
+<parameter name="CloneWithCommitMsgHookSSH" value="git clone ssh://caleb.mortensen@URL.com:29437/test &amp;&amp; scp -p -P 29437 caleb.mortensen@URL.com:hooks/commit-msg test/.git/hooks/" />
+<parameter name="PushProjectUrl" value="https://URL.com/test"/>
+
+<parameter name="Username" value="caleb.mortensen"/>
+<parameter name="Password" value="PASSWORD"/>
+<!-- <parameter name="Username" value="USER"/>
+<parameter name="Password" value="Password"/> -->
+
+<!-- GIT TEST SCRIPTS BELOW!!!  -->
+
+<!-- GIT TEST SCRIPT (Parameters)-->
+<test name="GIT_Workflow" preserve-order="true">
+<classes>
+<class name = "git.GIT" >
+<methods>
+<!-- Note - Clone manually to add Server to Known Hosts  -->
+<!-- <include name="initAddFileCommitIssueID" /> -->
+<include name="cloneAddFileCommitPush" />
+
+</methods>
+</class>
+</classes>
+</test>
+
+</suite>
+
