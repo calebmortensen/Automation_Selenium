@@ -7,11 +7,11 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-
+@Test(groups = "All")
 public class JIRA_LoginLogout extends browser.Browsers {
 	
 		
-	@Test(description = "JIRA_Launch", groups = "JIRA")
+	@Test(description = "JIRA_Launch", groups = {"JIRA", "smoke", "functional", "regression", "sanity", "DailyBuild"})
 	@Parameters({ "Url" })
 	public void JIRALaunch(String Url) {
 		
@@ -36,7 +36,7 @@ public class JIRA_LoginLogout extends browser.Browsers {
 	
 	
 
-	@Test(priority = 3, description = "JIRA_Login", groups = "JIRA")
+	@Test(priority = 3, description = "JIRA_Login", groups = {"JIRA"})
 	@Parameters({ "Username", "Password" })
 	public void JIRALogin(String Username, String Password) {
 

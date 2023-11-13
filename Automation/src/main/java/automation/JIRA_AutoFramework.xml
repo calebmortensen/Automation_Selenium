@@ -118,6 +118,12 @@
 
 <!-- JIRA TEST SCRIPT (Parameters)-->
 <test name="JIRA_CreateIssue" preserve-order="true">
+	<groups>
+		<run>
+			<include name="JIRA"></include>
+			<exclude name="regression"></exclude>
+		</run>
+	</groups>
 <classes>
 <class name = "jira.JIRA_CreateIssue" >
 <methods>
@@ -159,7 +165,7 @@
 </test>
 
 <!-- JIRA TEST SCRIPT -->
-<test name="JIRA_SelectIssue" preserve-order="true">
+<test name="JIRA_SelectIssue" preserve-order="true" enabled="true">
 <classes>
 <class name = "jira.JIRA_SelectIssue" >
 <methods>
