@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Dependency" verbose="1" configfailurepolicy="continue">
+
+	<test name="DependencyTest">
+		<groups>
+			<dependencies>
+				<group name="sanity" depends-on="smoke"/>
+				<group name="regression" depends-on="sanity"/> <!--so smoke 1st, then sanity, then regression-->
+			</dependencies>
+		</groups>
+		<classes>
+			<class name="TestDependencyWithGroups" />
+		</classes>
+	</test>
+
+</suite>
